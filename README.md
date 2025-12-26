@@ -1,5 +1,5 @@
 # Reinforcement-Learning
-## Project 1: Solve the River Crossing Puzzle with search algorithms (DFS, BFS, UCS, A*)
+
 ### Project Description
 In this project, implement reinforcement learning algorithms learned during the class using Python 3.9 to
 improve the performance of the AI agent under two scenarios. 
