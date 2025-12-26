@@ -4,7 +4,7 @@
 In this project, implement reinforcement learning algorithms learned during the class using Python 3.9 to
 improve the performance of the AI agent under two scenarios. 
 
-1) Install Gymnasium, an open source Python library (that used to
+Install Gymnasium, an open source Python library (that used to
 be maintained by Open AI) for developing and comparing reinforcement learning algorithms by
 providing a standard API to communicate between learning algorithms and environments. Use the command below:
 pip install gymnasium
