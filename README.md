@@ -19,7 +19,7 @@ reward rules) can be checked though this [link](https://gymnasium.farama.org/env
 Create the test_q1.py, copy the content below into test_q1.py, and run test_q1.py to make sure the
 environment of Blackjack is set correctly.
 
-import gymnasium as gym
+```import gymnasium as gym
 
 env = gym.make("Blackjack-v1", render_mode="human") # Initializing environments
 
@@ -35,7 +35,7 @@ for _ in range(50):
   
     observation, info = env.reset()
 
-env.close()
+env.close()```
 
 After running test_q1.py, you will see the GUI (which means all packages are set correctly).
 
