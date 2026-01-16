@@ -73,14 +73,11 @@ observation space, and reward rules) can be checked though this link.
 Create the test_q2.py, copy the content below into your test_q2.py, and run test_q2.py to make sure the
 environment of Frozen Lake is set correctly.
 
+```
 import gymnasium as gym
-
 env = gym.make("FrozenLake-v1", desc=None, map_name="4x4", render_mode=”human”,
-
 is_slippery=True, ) #initialization
-
 observation, info = env.reset()
-
 for _ in range(50):
 
   action = env.action_space.sample() # agent policy that uses the observation and info
@@ -92,7 +89,7 @@ for _ in range(50):
     observation, info = env.reset()
 
 env.close()
-
+```
 After running test_q2.py, you will see the GUI (which means all packages are set correctly).
 
 ##### Q2.2 Use a random policy to learn the underlying MDP
