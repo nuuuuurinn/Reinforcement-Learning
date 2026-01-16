@@ -19,7 +19,8 @@ reward rules) can be checked though this [link](https://gymnasium.farama.org/env
 Create the test_q1.py, copy the content below into test_q1.py, and run test_q1.py to make sure the
 environment of Blackjack is set correctly.
 
-```import gymnasium as gym
+```
+import gymnasium as gym
 
 env = gym.make("Blackjack-v1", render_mode="human") # Initializing environments
 
@@ -35,7 +36,8 @@ for _ in range(50):
   
     observation, info = env.reset()
 
-env.close()```
+env.close()
+```
 
 After running test_q1.py, you will see the GUI (which means all packages are set correctly).
 
@@ -44,6 +46,7 @@ To win this game, your card sum should be greater than the dealers without excee
 train an AI agent through Q-learning and play optimally with this environment. Please use the
 environment setting below (solution_q1.py).
 
+```
 import gymnasium as gym
 
 env = gym.make('Blackjack-v1', natural=False, sab=False, render_mode=”human”)
@@ -51,7 +54,7 @@ env = gym.make('Blackjack-v1', natural=False, sab=False, render_mode=”human”
 ###YOUR Q-LEARNING CODE BEGINS
 
 ###YOUR Q-LEARNING CODE ENDS
-
+```
 Implement a Q-learning algorithm in solution_q1.py (print out whether the bot won or lost in each
 episode and the total win rate), through which you can learn the optimal policy for playing Blackjack in
 this environment. So we expect you to write code that starts off by initializing the Q(s,a) table for all
