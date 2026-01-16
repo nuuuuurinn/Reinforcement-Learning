@@ -20,13 +20,21 @@ Create the test_q1.py, copy the content below into test_q1.py, and run test_q1.p
 environment of Blackjack is set correctly.
 
 import gymnasium as gym
+
 env = gym.make("Blackjack-v1", render_mode="human") # Initializing environments
+
 observation, info = env.reset()
+
 for _ in range(50):
+
   action = env.action_space.sample() # agent policy that uses the observation and info
+  
   observation, reward, terminated, truncated, info = env.step(action)
+  
   if terminated or truncated:
+  
     observation, info = env.reset()
+
 env.close()
 
 After running test_q1.py, you will see the GUI (which means all packages are set correctly).
@@ -97,8 +105,11 @@ for random exploration without the GUI and start the GUI to show how the optimal
 Note: Please make sure that you start off solution_q2.py by using this environment setting.
 
 import gymnasium as gym
+
 env = gym.make('FrozenLake-v1', desc=None, map_name="4x4", is_slippery=True,
+
 render_mode=”human”)
+
 #Your code for Q2.2 which Executes Random Policy until 1000 episodes
 #Your code for Q2.3 which implements Value Iteration
 #Your code for Q2.4 which implements Policy Extraction
