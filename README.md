@@ -45,7 +45,9 @@ train an AI agent through Q-learning and play optimally with this environment. P
 environment setting below (solution_q1.py).
 
 import gymnasium as gym
+
 env = gym.make('Blackjack-v1', natural=False, sab=False, render_mode=”human”)
+
 ###YOUR Q-LEARNING CODE BEGINS
 
 ###YOUR Q-LEARNING CODE ENDS
@@ -69,14 +71,23 @@ Create the test_q2.py, copy the content below into your test_q2.py, and run test
 environment of Frozen Lake is set correctly.
 
 import gymnasium as gym
+
 env = gym.make("FrozenLake-v1", desc=None, map_name="4x4", render_mode=”human”,
+
 is_slippery=True, ) #initialization
+
 observation, info = env.reset()
+
 for _ in range(50):
+
   action = env.action_space.sample() # agent policy that uses the observation and info
+  
   observation, reward, terminated, truncated, info = env.step(action)
+  
   if terminated or truncated:
+  
     observation, info = env.reset()
+
 env.close()
 
 After running test_q2.py, you will see the GUI (which means all packages are set correctly).
