@@ -1,13 +1,12 @@
-# Reinforcement-Learning
+# Reinforcement Learning Project 
 
 ### Project Description
-In this project, implement reinforcement learning algorithms learned during the class using Python 3.9 to
+In this project, I implemented reinforcement learning algorithms learned during DS442 class using Python 3.9 to
 improve the performance of the AI agent under two scenarios. 
 
-Install Gymnasium, an open source Python library (that used to
-be maintained by Open AI) for developing and comparing reinforcement learning algorithms by
-providing a standard API to communicate between learning algorithms and environments. Use the command below:
-pip install gymnasium
+I installed Gymnasium, an open source Python library (that used to be maintained by Open AI) for developing and comparing reinforcement learning algorithms by
+providing a standard API to communicate between learning algorithms and environments. 
+Use the command below: pip install gymnasium
 
 #### Question-1 Solving Blackjack Using Model-Free RL
 Blackjack is a card game where the goal is to beat the dealer by obtaining cards that
@@ -16,8 +15,7 @@ environment for Blackjack that we will be using for this question. The descripti
 this environment and corresponding parameters (action space, observation space, and
 reward rules) can be checked though this [link](https://gymnasium.farama.org/environments/toy_text/blackjack/).
 
-Create the test_q1.py, copy the content below into test_q1.py, and run test_q1.py to make sure the
-environment of Blackjack is set correctly.
+This is the environment to set up Blackjack correctly.
 
 ```
 import gymnasium as gym
@@ -39,12 +37,10 @@ for _ in range(50):
 env.close()
 ```
 
-After running test_q1.py, you will see the GUI (which means all packages are set correctly).
+After running test_q1.py, the GUI will appear (which means all packages are set correctly).
 
 ##### Q1.2
-To win this game, your card sum should be greater than the dealers without exceeding 21. You need to
-train an AI agent through Q-learning and play optimally with this environment. Please use the
-environment setting below (solution_q1.py).
+To win this game, your card sum should be greater than the dealers without exceeding 21. The AI agent needs to be trained through Q-learning and played optimally with this environment setting below (solution_q1.py):
 
 ```
 import gymnasium as gym
@@ -55,13 +51,13 @@ env = gym.make('Blackjack-v1', natural=False, sab=False, render_mode=”human”
 
 ###YOUR Q-LEARNING CODE ENDS
 ```
+
 Implement a Q-learning algorithm in solution_q1.py (print out whether the bot won or lost in each
 episode and the total win rate), through which you can learn the optimal policy for playing Blackjack in
-this environment. So we expect you to write code that starts off by initializing the Q(s,a) table for all
-possible values of s and a. And then you will act according to Q-learning, and every time you act, you will
+this environment. Write code that starts off by initializing the Q(s,a) table for all
+possible values of s and a. And then act according to Q-learning, and every time you act, you will
 have a chance to update your Q(s,a) table. Over time, if you implement Q-learning properly, you should
 be able to arrive at the optimal Q(s,a) values, which should enable you to act optimally.
-Make sure that you review your slides on Q-learning before you jump into this project.
 
 #### Questions-2 Solving Frozen Lake Using Model Based RL
 The Frozen lake environment on Gymnasium involves crossing a frozen lake from start
@@ -115,7 +111,6 @@ that each action is chosen according to the optimal policy that was extracted in
 At a high level, we expect solution_q2.py to look like the following. Your code will run the 1000 episodes
 for random exploration without the GUI and start the GUI to show how the optimal policy performs.
 
-Note: Please make sure that you start off solution_q2.py by using this environment setting.
 ```
 import gymnasium as gym
 
